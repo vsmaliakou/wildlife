@@ -1,6 +1,9 @@
 :root {
   --font-light: #f7f7f7;
   --orange-main: #cd6326;
+  --orange-light: #e39128;
+  --orange-dark: #8f5613;
+  --header-bg: #02160b;
 }
 
 *,
@@ -49,6 +52,12 @@ ul {
   width: 1440px;
   height: 100%;
   overflow: hidden;
+}
+
+.header,
+.survival {
+  width: 100%;
+  background: var(--header-bg);
 }
 
 .header {
@@ -107,12 +116,12 @@ ul {
 }
 
 .menu__item {
-    opacity: .75;
+  opacity: 0.75;
 }
 
 .menu__item:hover {
-    opacity: 1;
-    transition: .2s;
+  opacity: 1;
+  transition: 0.2s;
 }
 
 .menu__item__search {
@@ -139,4 +148,63 @@ ul {
 .menu__link__btn:hover {
   cursor: pointer;
   background: var(--orange-main);
+}
+
+.survival {
+  height: 700px;
+}
+
+.survival__bg {
+  width: 1440px;
+  height: 779px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url(./assets/images/survivalbg.jpg) no-repeat;
+}
+
+.survival__content {
+  padding: 204px 0 0;
+  max-width: 274px;
+}
+
+.survival__caption {
+  color: var(--orange-main);
+  font-family: "Open Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.survival__text {
+  padding: 55px 0 49px;
+  color: var(--font-light);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: justify;
+  letter-spacing: 0.45px;
+}
+
+.btn {
+  background: var(--orange-main);
+  font-size: 23px;
+  font-weight: 400;
+  color: var(--font-light);
+  border-radius: 5px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: var(--orange-light);
+}
+
+.btn:active {
+  background: var(--orange-dark);
+}
+
+.survival__donate {
+  width: 160px;
+  height: 60px;
 }
